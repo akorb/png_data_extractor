@@ -1,3 +1,11 @@
+A simpler solution with the [fq](https://github.com/wader/fq) tool:
+
+```shell
+fq '.chunks[] | select(.type == "IDAT") .data | tobytes' picture.png > picture.bin
+```
+
+---
+
 ## What it does
 
 The PNG format is essentially a container combining picture metadata (like resolution), with a payload, i.e., the picture data, which is always a zlib stream.
