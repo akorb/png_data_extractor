@@ -16,7 +16,7 @@ def main():
         startSearchIndex = idatIndex + 1;
         size_bytes = b[idatIndex - 4:idatIndex]
         dataSize = int.from_bytes(size_bytes, byteorder='big')
-        data = b[idatIndex + 4:idatIndex + 4 + dataSize + 4]
+        data = b[idatIndex + 4:idatIndex + 4 + dataSize]
 
         allData += data
 
